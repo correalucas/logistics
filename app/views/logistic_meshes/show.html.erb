@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Origin:</strong>
+  <%= @logistic_mesh.origin %>
+</p>
+
+<p>
+  <strong>destination:</strong>
+  <%= @logistic_mesh.destination %>
+</p>
+
+<p>
+  <strong>Distance:</strong>
+  <%= @logistic_mesh.distance %>
+</p>
+
+<%= link_to 'Edit', edit_logistic_mesh_path(@logistic_mesh) %> |
+<%= link_to 'Back', logistic_meshes_path %>

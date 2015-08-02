@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @map.name %>
+</p>
+
+<p>
+  <strong>Origin:</strong>
+  <%= @map.origin %>
+</p>
+
+<p>
+  <strong>destination:</strong>
+  <%= @map.destination %>
+</p>
+
+<p>
+  <strong>Autonomy:</strong>
+  <%= @map.autonomy %>
+</p>
+
+<p>
+  <strong>Gas price:</strong>
+  <%= @map.gas_price %>
+</p>
+
+<%= link_to 'Edit', edit_map_path(@map) %> |
+<%= link_to 'Back', maps_path %>

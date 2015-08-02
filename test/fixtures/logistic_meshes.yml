@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  origin: A
+  destination: B
+  distance: 9.99
+
+two:
+  origin: C
+  destination: E
+  distance: 9.99

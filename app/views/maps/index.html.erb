@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Logistic Meshes', logistic_meshes_path %>
+
+<h1>Search History</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Map Name</th>
+      <th>Origin</th>
+      <th>destination</th>
+      <th>Autonomy</th>
+      <th>Gas price</th>
+      <th>Best Route</th>
+      <th>Cost</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @maps.each do |map| %>
+      <tr>
+        <td><%= map.name %></td>
+        <td><%= map.origin %></td>
+        <td><%= map.destination %></td>
+        <td><%= map.autonomy %></td>
+        <td><%= map.gas_price %></td>
+        <td><%= map.best_route %></td>
+        <td><%= map.cost %></td>
+        <td><%= link_to 'Show', map %></td>
+        <td><%= link_to 'Destroy', map, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+

@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Search History', root_path %>
+
+<h1>Listing Logistic Meshes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Origin</th>
+      <th>destination</th>
+      <th>Distance</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @logistic_meshes.each do |logistic_mesh| %>
+      <tr>
+        <td><%= logistic_mesh.origin %></td>
+        <td><%= logistic_mesh.destination %></td>
+        <td><%= logistic_mesh.distance %></td>
+        <td><%= link_to 'Show', logistic_mesh %></td>
+        <td><%= link_to 'Edit', edit_logistic_mesh_path(logistic_mesh) %></td>
+        <td><%= link_to 'Destroy', logistic_mesh, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Logistic mesh', new_logistic_mesh_path %>
